@@ -10,33 +10,33 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	vbNewUser.click = function vbNewUser_click (event)// @startlock
 	{// @endlock
-		//if(newUserName!='')
-		//{
-		//	newUser = ds.User.createUser(newUserName);
-		//	sources.user.addEntity(newUser);
-		//	sources.user.collectionRefresh(); 
-        //        // put the current entity in the datasource's entity collection
+		if(newUserName!='')
+		{
+			newUser = ds.User.createUser(newUserName);
+			sources.user.addEntity(newUser);
+			sources.user.collectionRefresh(); 
+                // put the current entity in the datasource's entity collection
         }
 	};// @lock
 
 	login1.logout = function login1_logout (event)// @startlock
 	{// @endlock
-		//setObjVisibility();
+		setObjVisibility();
 	};// @lock
 
 	login1.login = function login1_login (event)// @startlock
 	{// @endlock
-		//setObjVisibility();
+		setObjVisibility();
 	};// @lock
 	
-	//setObjVisibility();
+	setObjVisibility();
 
 	function setObjVisibility() {
-		//if (WAF.directory.currentUserBelongsTo('Admin')) {
-        //   $$('body').show();
-       	//} else {
-        //   $$('body').hide();
-       	//}       	
+		if (WAF.directory.currentUserBelongsTo('Admin')) {
+           $$('body').show();
+       	} else {
+           $$('body').hide();
+       	}       	
        	
 	}
 
