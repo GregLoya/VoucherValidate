@@ -56,8 +56,18 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 						}
 					else
 						{
-							resultWidget.setValue("# "+[queryStr]+" VALID");
-							resultWidget.setTextColor("green");
+							if(sources.voucher.dateRedeemed!=null)
+							{
+								resultWidget.setValue("Voucher has been Redeemed");
+								resultWidget.setTextColor("red");
+							}
+							else
+							{
+								resultWidget.setValue("# "+[queryStr]+" VALID");
+								resultWidget.setTextColor("green");
+							}
+							
+
 						}
 				}
 			,params : [queryStr]});	
