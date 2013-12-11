@@ -15,6 +15,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			newUser = ds.User.createUser(newUserName);
 			sources.user.addEntity(newUser);
 			sources.user.collectionRefresh(); 
+			alert('added');
                 // put the current entity in the datasource's entity collection
                //test comment
         }

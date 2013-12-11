@@ -30,7 +30,7 @@ guidedModel =// @startlock
 				// remove from directory
 				var thisUser = directory.user(this.userDirectoryID);
 				thisUser.remove();
-				directory.save();
+				directory.save();  //
 
 			},// @startlock
 			onSave:function()
